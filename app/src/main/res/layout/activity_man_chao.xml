@@ -46,10 +46,10 @@
     </LinearLayout>
 
     <ProgressBar
+        android:indeterminateDrawable="@drawable/progressbar"
         android:id="@+id/progressBar"
         android:layout_width="18dp"
         android:layout_height="18dp"
-        android:visibility="gone"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="196dp"
         tools:layout_editor_absoluteY="672dp" />

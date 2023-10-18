@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffff"
+    android:gravity="center"
+    tools:context=".ManChao">
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="126dp"
+        android:layout_height="181dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="126dp"
+            android:layout_height="126dp"
+            android:background="@drawable/border_mc"
+            android:gravity="center"
+            app:cardCornerRadius="30dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="84dp"
+                android:layout_height="84dp"
+                android:background="@drawable/image9" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="196dp"
+            android:layout_height="35dp"
+            android:lineHeight="34.75dp"
+            android:text="ALL PDF READER"
+            android:textColor="#BB1313"
+            android:textSize="24px"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:visibility="gone"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="196dp"
+        tools:layout_editor_absoluteY="672dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="75dp"
+        android:layout_height="15dp"
+        android:lineHeight="14.52dp"
+        android:paddingLeft="143dp"
+        android:paddingTop="736dp"
+        android:text="Please wait..."
+        android:textColor="#ffff"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.977" />
+
+    <ImageView
+        android:layout_width="425dp"
+        android:layout_height="268dp"
+        android:background="@drawable/vecto1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+

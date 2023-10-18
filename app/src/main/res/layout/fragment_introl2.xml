@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Slide.Introl2Fragment">
+
+    <ImageView
+        android:layout_centerInParent="true"
+        android:id="@+id/imageView3"
+        android:layout_width="235dp"
+        android:layout_height="194dp"
+        android:background="@drawable/img20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.333" />
+
+    <LinearLayout
+        android:layout_below="@+id/imageView3"
+        android:layout_centerHorizontal="true"
+        android:layout_width="328dp"
+        android:layout_height="102dp"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        app:layout_constraintVertical_bias="0.335">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="File Management"
+            android:textColor="#BB1313"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="Manage files effectively and quickly"
+            android:textColor="#292D32"
+            android:textSize="14dp" />
+
+    </LinearLayout>
+
+
+    <!--    <androidx.cardview.widget.CardView-->
+<!--        android:layout_width="360dp"-->
+<!--        android:layout_height="122dp"-->
+<!--        app:cardCornerRadius="20dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent">-->
+<!--        <LinearLayout-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical">-->
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:orientation="horizontal">-->
+<!--                <ImageView-->
+<!--                    android:layout_marginLeft="20dp"-->
+<!--                    android:layout_width="48dp"-->
+<!--                    android:layout_height="48dp"-->
+<!--                    android:background="@drawable/image19"/>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical">-->
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="StreamYard is a live streaming studio"-->
+<!--                        android:textColor="#7879F1"-->
+<!--                        android:textStyle="bold"-->
+<!--                        android:textSize="14dp"-->
+<!--                        />-->
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="The easiest way to create professional livestream. Get started today."-->
+<!--                        android:textSize="12dp"-->
+<!--                        android:textColor="#1A1C21"/>-->
+<!--                </LinearLayout>-->
+<!--            </LinearLayout>-->
+
+<!--            <TextView-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginLeft="15dp"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_width="328dp"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:text="INSTALL"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textStyle="bold"-->
+<!--                android:background="@drawable/boder"/>-->
+<!--        </LinearLayout>-->
+
+
+
+<!--    </androidx.cardview.widget.CardView>-->
+
+</RelativeLayout>

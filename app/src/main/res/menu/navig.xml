@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+     android:id="@+id/document"
+     android:icon="@drawable/home"
+     android:title="Document"/>
+    <item
+        android:id="@+id/recent"
+        android:icon="@drawable/recent"
+        android:title="Recent"/>
+    <item
+        android:id="@+id/favorite"
+        android:icon="@drawable/heart"
+        android:title="Favorite"/>
+    <item
+        android:id="@+id/setting"
+        android:icon="@drawable/setting"
+        android:title="Setting"/>
+</menu>

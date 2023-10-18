@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    android:layout_width="322dp"
+    android:layout_height="170dp">
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_marginLeft="100dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/cham"
+                />
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_width="194dp"
+                android:layout_height="21dp"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:text="Rename file "
+                />
+        </LinearLayout>
+        <EditText
+            android:layout_gravity="center"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            />
+        <LinearLayout
+            android:layout_marginLeft="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:gravity="center"
+                android:background="@drawable/cannel"
+                android:layout_width="123dp"
+                android:layout_height="39dp"
+                android:text="Cancel"
+                android:textStyle="bold"/>
+            <LinearLayout
+                android:gravity="center"
+                android:layout_marginLeft="25dp"
+                android:layout_width="123dp"
+                android:layout_height="39dp"
+                android:background="@drawable/borderdelete"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="45dp"
+                    android:layout_height="21dp"
+                    android:textSize="14dp"
+                    android:text="Agree"
+                    android:gravity="center"
+                    android:textColor="#ffff"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

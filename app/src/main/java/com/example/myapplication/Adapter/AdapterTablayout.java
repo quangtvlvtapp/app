@@ -27,6 +27,7 @@ import java.util.List;
 public class AdapterTablayout extends RecyclerView.Adapter<AdapterTablayout.ViewHodel> {
     List<item_ds> list = new ArrayList<>();
     private Context mContext;
+    boolean like=false;
 
 
     public AdapterTablayout(List<item_ds> list, Context mContext) {
@@ -53,6 +54,20 @@ public class AdapterTablayout extends RecyclerView.Adapter<AdapterTablayout.View
               @Override
               public void onClick(View view) {
                    openDilog(Gravity.CENTER);
+              }
+          });
+
+        holder.like1.setOnClickListener(new View.OnClickListener() {
+              @Override
+              public void onClick(View view) {
+                  if(like){
+                      holder.like1.setImageResource(R.drawable.like);
+                      like= false;
+                  }else {
+                      holder.like1.setImageResource(R.drawable.likedm);
+                      like= true;
+
+                  }
               }
           });
 

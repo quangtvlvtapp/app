@@ -12,7 +12,7 @@
         android:text="PDF"
         android:textSize="14dp"
         android:textStyle="bold"
-        android:textColor="#A0A0A0"
+        android:textColor="#ffff"
         android:background="@drawable/bordertablayout"
         />
 </LinearLayout>

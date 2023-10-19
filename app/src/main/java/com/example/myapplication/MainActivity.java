@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager2.widget.ViewPager2;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -13,8 +14,14 @@ import android.view.MenuItem;
 import com.example.myapplication.Adapter.AdapterListDS;
 import com.example.myapplication.Adapter.AdapterTablayout;
 import com.example.myapplication.DTO.item_ds;
+import com.example.myapplication.Fragment.FavoriteFragment;
+import com.example.myapplication.Fragment.HomeFragment;
+import com.example.myapplication.Fragment.SettingFragment;
+import com.example.myapplication.Fragment.recentFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -26,6 +33,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     List<String> list;
     List<item_ds> list2;
     AdapterListDS adapterListDS;
+//    HomeFragment homeFragment = new HomeFragment();
+//    FavoriteFragment favoriteFragment = new FavoriteFragment();
+//    recentFragment recentFragment = new recentFragment();
+//    SettingFragment settingFragment = new SettingFragment();
+
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +76,34 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         LinearLayoutManager linearLayout = new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.VERTICAL,false);
         listdanhsach1.setLayoutManager(linearLayout);
         listdanhsach1.setAdapter(adapterTablayout);
+
+
+//
+//     getSupportFragmentManager().beginTransaction().replace(R.id.view_page,homeFragment).commit();
+//     bottomNavigationView.setOnItemReselectedListener(new NavigationBarView.OnItemReselectedListener() {
+//         @SuppressLint("NonConstantResourceId")
+//         @Override
+//         public void onNavigationItemReselected(@NonNull MenuItem item) {
+//             switch (item.getItemId()){
+//                 case R.id.menu_document:
+//                     getSupportFragmentManager().beginTransaction().replace(R.id.view_page,homeFragment).commit();
+//                     return;
+//                 case R.id.menu_recent:
+//                     getSupportFragmentManager().beginTransaction().replace(R.id.view_page,favoriteFragment).commit();
+//                     return;
+//                 case R.id.menu_favorite:
+//                     getSupportFragmentManager().beginTransaction().replace(R.id.view_page,recentFragment).commit();
+//                     return;
+//                 case R.id.menu_setting:
+//                     getSupportFragmentManager().beginTransaction().replace(R.id.view_page,settingFragment).commit();
+//                     return;
+//             }
+//             return;
+//         }
+//     });
+
+
+
 
     }
 

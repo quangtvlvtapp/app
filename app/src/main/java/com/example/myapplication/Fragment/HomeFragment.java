@@ -66,10 +66,10 @@ public class HomeFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        tabLayout = view.findViewById(R.id.tab_layout);
-        viewPager = view.findViewById(R.id.viewpager);
-        TabbarAdapter tabbarAdapter = new TabbarAdapter(getActivity().getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
-        viewPager.setAdapter(tabbarAdapter);
-        tabLayout.setupWithViewPager(viewPager);
+//        tabLayout = view.findViewById(R.id.tab_layout);
+//        viewPager = view.findViewById(R.id.viewpager);
+//        TabbarAdapter tabbarAdapter = new TabbarAdapter(getActivity().getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+//        viewPager.setAdapter(tabbarAdapter);
+//        tabLayout.setupWithViewPager(viewPager);
     }
 }

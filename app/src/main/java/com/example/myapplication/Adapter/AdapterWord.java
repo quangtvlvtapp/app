@@ -25,56 +25,52 @@ import com.example.myapplication.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AdapterTablayout extends RecyclerView.Adapter<AdapterTablayout.ViewHodel> {
-    List<item_ds> list = new ArrayList<>();
+public class AdapterWord extends RecyclerView.Adapter<AdapterWord.ViewHodel>{
+    List<item_w> listw = new ArrayList<>();
     private Context mContext;
     boolean like=false;
 
-
-    public AdapterTablayout(List<item_ds> list, Context mContext) {
-        this.list = list;
+    public AdapterWord(List<item_w> list, Context mContext) {
+        this.listw = listw;
         this.mContext = mContext;
     }
-
 
     @NonNull
     @Override
     public ViewHodel onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(mContext).inflate(R.layout.item_danhsach,parent,false);
+        View view = LayoutInflater.from(mContext).inflate(R.layout.item_layoutword,parent,false);
         return new ViewHodel(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHodel holder, int position) {
-        item_ds itemDs = list.get(position);
-          holder.textView.setText(itemDs.getName());
-          holder.textView2.setText(itemDs.getDate());
-          holder.textView3.setText(itemDs.getTime());
-          holder.textView4.setText(itemDs.getDulieu());
+        item_w itemDs = listw.get(position);
+        holder.textView.setText(itemDs.getNamew());
+        holder.textView2.setText(itemDs.getDatew());
+        holder.textView3.setText(itemDs.getTimew());
+        holder.textView4.setText(itemDs.getDulieuw());
 
-          holder.deleteedit1.setOnClickListener(new View.OnClickListener() {
-              @Override
-              public void onClick(View view) {
-                   openDilog(Gravity.CENTER);
-              }
-          });
+        holder.deleteedit1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openDilog(Gravity.CENTER);
+            }
+        });
 
         holder.like1.setOnClickListener(new View.OnClickListener() {
-              @Override
-              public void onClick(View view) {
-                  if(like){
-                      holder.like1.setImageResource(R.drawable.like);
-                      like= false;
-                  }else {
-                      holder.like1.setImageResource(R.drawable.likedm);
-                      like= true;
+            @Override
+            public void onClick(View view) {
+                if(like){
+                    holder.like1.setImageResource(R.drawable.like);
+                    like= false;
+                }else {
+                    holder.like1.setImageResource(R.drawable.likedm);
+                    like= true;
 
-                  }
-              }
-          });
-
+                }
+            }
+        });
     }
-
     private void openDilog(int gravity){
         LinearLayout edit,delete,share;
         final Dialog dialog = new Dialog((Activity) mContext);
@@ -149,12 +145,12 @@ public class AdapterTablayout extends RecyclerView.Adapter<AdapterTablayout.View
         WindowManager.LayoutParams layoutParams = window.getAttributes();
         layoutParams.gravity = gravity;
         window.setAttributes(layoutParams);
-            dialog.setCancelable(true);
+        dialog.setCancelable(true);
         dialog.show();
     }
     @Override
     public int getItemCount() {
-        return list.size();
+        return listw.size();
     }
 
     public class ViewHodel extends RecyclerView.ViewHolder{

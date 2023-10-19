@@ -9,9 +9,10 @@
     tools:context=".ManChao">
 
     <LinearLayout
-        android:layout_gravity="center"
+        android:id="@+id/linearLayout8"
         android:layout_width="126dp"
         android:layout_height="181dp"
+        android:layout_gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,10 +35,10 @@
         </RelativeLayout>
 
         <TextView
-            android:layout_marginLeft="28dp"
-            android:layout_marginTop="10dp"
             android:layout_width="196dp"
             android:layout_height="35dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="10dp"
             android:lineHeight="34.75dp"
             android:text="ALL PDF READER"
             android:textColor="#BB1313"
@@ -45,14 +46,23 @@
             android:textStyle="bold" />
     </LinearLayout>
 
+    <ImageView
+        android:layout_width="425dp"
+        android:layout_height="268dp"
+        android:background="@drawable/vecto1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
     <ProgressBar
-        android:indeterminateDrawable="@drawable/progressbar"
         android:id="@+id/progressBar"
         android:layout_width="18dp"
         android:layout_height="18dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="196dp"
-        tools:layout_editor_absoluteY="672dp" />
+        android:layout_marginTop="648dp"
+        android:indeterminateDrawable="@drawable/progressbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView2"
@@ -68,14 +78,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.977" />
+        app:layout_constraintVertical_bias="0.959" />
 
-    <ImageView
-        android:layout_width="425dp"
-        android:layout_height="268dp"
-        android:background="@drawable/vecto1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 

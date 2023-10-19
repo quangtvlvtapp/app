@@ -42,25 +42,25 @@ public class BottomFragmentAdapter extends FragmentStatePagerAdapter {
         return 4;
     }
 
-    @Nullable
-    @Override
-    public CharSequence getPageTitle(int position) {
-        String title ="";
-        switch (position){
-            case 0:
-                title ="Doucument";
-                break;
-            case 1:
-                title="Recent";
-                break;
-            case 2:
-                title="Favorite";
-                break;
-            case 3:
-                title="Setting";
-                break;
-
-        }
-        return super.getPageTitle(position);
-    }
+//    @Nullable
+//    @Override
+//    public CharSequence getPageTitle(int position) {
+//        String title ="";
+//        switch (position){
+//            case 0:
+//                title ="Doucument";
+//                break;
+//            case 1:
+//                title="Recent";
+//                break;
+//            case 2:
+//                title="Favorite";
+//                break;
+//            case 3:
+//                title="Setting";
+//                break;
+//
+//        }
+//        return super.getPageTitle(position);
+//    }
 }

@@ -97,6 +97,14 @@
         android:layout_marginTop="5dp"
         android:layout_marginEnd="31dp" />
 
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomNavigation"
+        android:id="@+id/view_page"/>
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
         android:id="@+id/bottomNavigation"

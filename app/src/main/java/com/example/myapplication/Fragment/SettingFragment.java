@@ -3,6 +3,7 @@ package com.example.myapplication.Fragment;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -15,7 +16,9 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
+import com.example.myapplication.ChitietpbMainActivity2;
 import com.example.myapplication.R;
 
 /**
@@ -27,6 +30,7 @@ public class SettingFragment extends Fragment {
 
 
     LinearLayout ngonngu;
+    TextView textView;
     // TODO: Rename and change types of parameters
 
 
@@ -62,6 +66,7 @@ public class SettingFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         ngonngu = view.findViewById(R.id.languagest);
+        textView = view.findViewById(R.id.xemct);
 
         ngonngu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,5 +85,13 @@ public class SettingFragment extends Fragment {
                 dialog.show();
             }
         });
+        textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+              startActivity(new Intent(getContext(),ChitietpbMainActivity2.class));
+            }
+        });
+
+
     }
 }

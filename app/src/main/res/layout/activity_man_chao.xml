@@ -52,11 +52,12 @@
         android:background="@drawable/vecto1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="18dp"
         android:layout_height="18dp"
-        android:layout_marginTop="648dp"
+        android:layout_marginTop="680dp"
         android:indeterminateDrawable="@drawable/progressbar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -65,12 +66,10 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
+        android:layout_marginLeft="40dp"
         android:id="@+id/textView2"
         android:layout_width="149dp"
         android:layout_height="18dp"
-        android:lineHeight="14.52dp"
-        android:paddingLeft="143dp"
-        android:paddingTop="736dp"
         android:text="This is contain ads ..."
         android:textColor="#ffff"
         android:textSize="12dp"

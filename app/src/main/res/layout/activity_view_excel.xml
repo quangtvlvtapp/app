@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.ViewExcelActivity">
+    <LinearLayout
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#217346"
+        android:orientation="horizontal">
+        <ImageView
+
+            android:id="@+id/outtrang"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/arrowleft"
+            android:layout_margin="30dp"/>
+        <TextView
+            android:layout_width="102dp"
+            android:layout_height="22dp"
+            android:text="example.xlxs"
+            android:textSize="16dp"
+            android:textColor="#EEF1F7"
+            android:layout_marginTop="30dp"
+           android:textStyle="bold"
+
+            />
+        <ImageView
+            android:layout_marginLeft="130dp"
+            android:id="@+id/uploadtrang"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/upload"
+            android:layout_marginTop="30dp"/>
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:id="@+id/chucnang"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/bacham"
+            android:layout_marginTop="30dp"/>
+    </LinearLayout>
+    <ImageView
+        android:layout_below="@+id/menu"
+        android:id="@+id/docexcel"
+        android:layout_width="408dp"
+        android:layout_height="665dp"
+        android:background="@drawable/excel"
+        />
+    <LinearLayout
+        android:background="#ffff"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="56dp"
+            android:layout_height="22dp"
+            android:id="@+id/sheet1"
+            android:text="Sheet 1"
+            android:textColor="#00733B"
+            android:layout_margin="10dp"/>
+        <TextView
+            android:layout_width="56dp"
+            android:layout_height="22dp"
+            android:id="@+id/sheet2"
+            android:text="Sheet 2"
+            android:textColor="#A0A0A0"
+            android:layout_margin="10dp"/>
+    </LinearLayout>
+</RelativeLayout>

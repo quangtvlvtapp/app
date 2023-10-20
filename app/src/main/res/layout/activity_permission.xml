@@ -94,55 +94,28 @@
                 android:textColor="#1B1B1B"
                 android:textSize="14dp"
                 android:textStyle="bold" />
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:layout_width="56dp"
+                android:layout_height="32dp"
+                android:background="@drawable/swich"
+                android:layout_marginTop="11dp"
+                android:layout_marginLeft="200dp"/>
 
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView2"
-        android:layout_width="328dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="20dp"
-        app:cardCornerRadius="15dp"
+    <TextView
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        android:textColor="#B71D21"
+        android:textSize="14dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.566"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Camera  Recorder"
-            android:textColor="#1B1B1B"
-            android:textSize="14dp"
-            android:textStyle="bold"
-            tools:layout_editor_absoluteX="145dp"
-            tools:layout_editor_absoluteY="493dp" />
-    </androidx.cardview.widget.CardView>
-
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="328dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="20dp"
-        app:cardCornerRadius="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.566"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView2">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Screen Premissions"
-            android:textColor="#1B1B1B"
-            android:textSize="14dp"
-            android:textStyle="bold"
-            tools:layout_editor_absoluteX="145dp"
-            tools:layout_editor_absoluteY="493dp" />
-    </androidx.cardview.widget.CardView>
-
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
     <androidx.cardview.widget.CardView
         android:layout_width="360dp"
         android:layout_height="247dp"

@@ -3,8 +3,10 @@ package com.example.myapplication.Adapter;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,6 +23,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.myapplication.DTO.item_ds;
 import com.example.myapplication.DTO.item_w;
 import com.example.myapplication.R;
+import com.example.myapplication.View.pdfActivity;
+import com.example.myapplication.View.pdffActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -73,6 +77,21 @@ public class AdapterTablayout extends RecyclerView.Adapter<AdapterTablayout.View
               }
           });
 
+        holder.linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                 onClickPdf(itemDs);
+            }
+        });
+
+    }
+
+    private void onClickPdf(item_ds itemDs) {
+        Intent intent = new Intent(mContext, pdffActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("object_user",itemDs);
+//        intent.putExtra(bundle);
+        mContext.startActivity(intent);
     }
 
     private void openDilog(int gravity){
@@ -160,9 +179,11 @@ public class AdapterTablayout extends RecyclerView.Adapter<AdapterTablayout.View
     public class ViewHodel extends RecyclerView.ViewHolder{
         private TextView textView,textView2,textView3,textView4;
         private ImageView like1,deleteedit1;
+        LinearLayout linearLayout;
 
         public ViewHodel(@NonNull View itemView) {
             super(itemView);
+            linearLayout = (LinearLayout) itemView.findViewById(R.id.layout_item);
             like1 = (ImageView) itemView.findViewById(R.id.like);
             deleteedit1 = (ImageView) itemView.findViewById(R.id.deleteedit);
             textView = (TextView) itemView.findViewById(R.id.text1);

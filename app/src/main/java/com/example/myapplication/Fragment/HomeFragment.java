@@ -6,15 +6,26 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.myapplication.Adapter.AdapterListDS;
+import com.example.myapplication.Adapter.AdapterTablayout;
+import com.example.myapplication.DTO.item_ds;
+import com.example.myapplication.MainActivity;
 import com.example.myapplication.R;
 import com.example.myapplication.TabbarAdapter;
+import com.example.myapplication.tabbar;
 import com.google.android.material.tabs.TabLayout;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -28,20 +39,15 @@ public class HomeFragment extends Fragment {
 
 
     // TODO: Rename and change types of parameters
-    private TabLayout tabLayout;
-    private ViewPager viewPager;
+    RecyclerView tablayout1, listdanhsach1;
+    AdapterTablayout adapterlist2;
+    List<String> list;
+    List<item_ds> list2;
+    AdapterListDS adapterListDS;
     public HomeFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-
-     * @return A new instance of fragment HomeFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static HomeFragment newInstance() {
         HomeFragment fragment = new HomeFragment();
         Bundle args = new Bundle();
@@ -71,5 +77,49 @@ public class HomeFragment extends Fragment {
 //        TabbarAdapter tabbarAdapter = new TabbarAdapter(getActivity().getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
 //        viewPager.setAdapter(tabbarAdapter);
 //        tabLayout.setupWithViewPager(viewPager);
+        tablayout1 = view.findViewById(R.id.tablayout);
+        listdanhsach1 = view.findViewById(R.id.listdanhsach);
+        list = new ArrayList<>();
+        String[] tab = {"PDF", "Word","Excel", "PPT"};
+        list.addAll(Arrays.asList(tab));
+        list2 = new ArrayList<>();
+        list2.add(new item_ds("All PDF Reader", "2023/05/31","11:37", "37.08KB","PDF"));
+        list2.add(new item_ds("All PDF Reader", "2023/05/31","11:37", "37.08KB","PDF"));
+        list2.add(new item_ds("All PDF Reader", "2023/05/31","11:37", "37.08KB","Word"));
+        list2.add(new item_ds("All PDF Reader", "2023/05/31","11:37", "37.08KB","Word"));
+        list2.add(new item_ds("All PDF Reader", "2023/05/31","11:37", "37.08KB","Word"));
+        list2.add(new item_ds("All PDF Reader", "2023/05/31","11:37", "37.08KB","Word"));
+        list2.add(new item_ds("All PDF Reader", "2023/05/31","11:37", "37.08KB","Word"));
+        list2.add(new item_ds("All PDF Reader", "2023/05/31","11:37", "37.08KB","Word"));
+        list2.add(new item_ds("All PDF Reader", "2023/05/31","11:37", "37.08KB","Word"));
+        adapterlist2 = new AdapterTablayout(list2, getContext());
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false);
+        listdanhsach1.setLayoutManager(linearLayoutManager);
+        listdanhsach1.setAdapter(adapterlist2);
+        adapterListDS = new AdapterListDS(list, getContext(), new tabbar() {
+            @Override
+            public void onclick(String s) {
+                List<item_ds> listm = new ArrayList<>();
+                for(int i = 0;i < list2.size();i++){
+                    if(list2.get(i).getCataname()== s){
+                        listm.add(list2.get(i));
+                    }
+                }
+                adapterlist2 = new AdapterTablayout(listm, getContext());
+                LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false);
+                listdanhsach1.setLayoutManager(linearLayoutManager);
+                listdanhsach1.setAdapter(adapterlist2);
+            }
+        });
+        LinearLayoutManager linearLayoutManager1 = new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false);
+        tablayout1.setLayoutManager(linearLayoutManager1);
+        tablayout1.setAdapter(adapterListDS);
+
+
+
+//        list2 = new ArrayList<>();
+//        String[] tab2 = {"All PDF Reader", "2023/05/31","11:37", "37.08KB"};
+//        list2.addAll(Arrays.asList(tab2));
+
     }
 }

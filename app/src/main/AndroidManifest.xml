@@ -13,14 +13,26 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".View.pdffActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChitietpbMainActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".View.SlideShowppActivity"
+            android:exported="false" />
+        <activity
+            android:name=".View.ppActivity"
+            android:exported="false" />
+        <activity
+            android:name=".View.pdfActivity"
+            android:exported="false" />
+        <activity
+            android:name=".View.ViewExcelActivity"
+            android:exported="false" />
+        <activity
             android:name=".Tablayout"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false"></activity>
         <activity
             android:name=".Permission"
             android:exported="false" />
@@ -32,12 +44,16 @@
             android:exported="false" />
         <activity
             android:name=".ManChao"
-            android:exported="false">
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
     </application>
 
 </manifest>

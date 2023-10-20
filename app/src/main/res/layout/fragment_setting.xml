@@ -10,7 +10,7 @@
         android:id="@+id/imageView6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="408dp"
+        android:layout_marginBottom="364dp"
         android:background="@drawable/setting"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,6 +25,19 @@
         android:textColor="#A0A0A0"
         android:textSize="14dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+
+    <TextView
+        android:id="@+id/xemct"
+        android:layout_width="140dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="32dp"
+        android:text="Xem chi tiết phiên bản"
+        android:textColor="#A0A0A0"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView7" />
 

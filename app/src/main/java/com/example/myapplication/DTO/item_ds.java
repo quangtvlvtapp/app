@@ -1,19 +1,31 @@
 package com.example.myapplication.DTO;
 
-public class item_ds {
+import java.io.Serializable;
+
+public class item_ds implements Serializable {
     public String name;
     public String date;
     public String time;
     public String dulieu;
+    public String cataname;
 
     public item_ds() {
     }
 
-    public item_ds(String name, String date, String time, String dulieu) {
+    public item_ds(String name, String date, String time, String dulieu,String cataname) {
         this.name = name;
         this.date = date;
         this.time = time;
         this.dulieu = dulieu;
+        this.cataname = cataname;
+    }
+
+    public String getCataname() {
+        return cataname;
+    }
+
+    public void setCataname(String cataname) {
+        this.cataname = cataname;
     }
 
     public String getName() {

@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import com.example.myapplication.Adapter.AdapterListDS;
 import com.example.myapplication.Adapter.AdapterTablayout;
@@ -34,6 +35,7 @@ public class FavoriteFragment extends Fragment {
     List<String> list;
     List<item_ds> list2;
     AdapterListDS adapterListDS;
+    LinearLayout linearLayout;
 
     // TODO: Rename and change types of parameters
 
@@ -71,11 +73,40 @@ public class FavoriteFragment extends Fragment {
         list = new ArrayList<>();
         String[] tab = {"PDF", "Word","Excel", "PPT"};
         list.addAll(Arrays.asList(tab));
+        linearLayout = view.findViewById(R.id.layoutf);
 
+
+        int p = R.drawable.maunavpdf;
+        int w = R.drawable.navword;
+        int e= R.drawable.navex;
+        int pp= R.drawable.navpp;
         adapterListDS = new AdapterListDS(list, getContext(), new tabbar() {
             @Override
             public void onclick(String s) {
-
+                List<item_ds> listm = new ArrayList<>();
+                for(int i = 0;i < list2.size();i++){
+                    if(list2.get(i).getCataname()== s){
+                        listm.add(list2.get(i));
+                    }
+                }
+                switch (s){
+                    case "PDF":
+                        linearLayout.setBackgroundResource(p);
+                        break;
+                    case "Word":
+                        linearLayout.setBackgroundResource(w);
+                        break;
+                    case "Excel":
+                        linearLayout.setBackgroundResource(e);
+                        break;
+                    case "PPT":
+                        linearLayout.setBackgroundResource(pp);
+                        break;
+                }
+                adapterTablayout = new AdapterTablayout(listm, getContext());
+                LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false);
+                listdanhsach1.setLayoutManager(linearLayoutManager);
+                listdanhsach1.setAdapter(adapterTablayout);
             }
         });
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false);
@@ -87,19 +118,33 @@ public class FavoriteFragment extends Fragment {
 //        list2 = new ArrayList<>();
 //        String[] tab2 = {"All PDF Reader", "2023/05/31","11:37", "37.08KB"};
 //        list2.addAll(Arrays.asList(tab2));
+
+
+        int pdf = R.drawable.dsach;
+        int word = R.drawable.word;
+        int excel = R.drawable.logo_ex;
+        int ppt = R.drawable.logo_ppt;
         list2 = new ArrayList<>();
-        list2.add(new item_ds("All PDF Reader", "2023/05/31","11:37", "37.08KB","PDF"));
-        list2.add(new item_ds("All PDF Reader", "2023/05/31","11:37", "37.08KB","PDF"));
-        list2.add(new item_ds("All PDF Reader", "2023/05/31","11:37", "37.08KB","Word"));
-        list2.add(new item_ds("All PDF Reader", "2023/05/31","11:37", "37.08KB","Word"));
-        list2.add(new item_ds("All PDF Reader", "2023/05/31","11:37", "37.08KB","Word"));
-        list2.add(new item_ds("All PDF Reader", "2023/05/31","11:37", "37.08KB","Word"));
-        list2.add(new item_ds("All PDF Reader", "2023/05/31","11:37", "37.08KB","Word"));
-        list2.add(new item_ds("All PDF Reader", "2023/05/31","11:37", "37.08KB","Word"));
-        list2.add(new item_ds("All PDF Reader", "2023/05/31","11:37", "37.08KB","Word"));
-        adapterTablayout = new AdapterTablayout(list2, getContext());
-        LinearLayoutManager linearLayout = new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false);
-        listdanhsach1.setLayoutManager(linearLayout);
+
+        list2.add(new item_ds(pdf,"All PDF Reader", "2023/05/31","11:37", "37.08KB","PDF"));
+        list2.add(new item_ds(pdf,"All PDF Reader", "2023/05/31","11:37", "37.08KB","PDF"));
+        list2.add(new item_ds(word,"All PDF Reader", "2023/05/31","11:37", "37.08KB","Word"));
+        list2.add(new item_ds(word,"All PDF Reader", "2023/05/31","11:37", "37.08KB","Word"));
+        list2.add(new item_ds(word,"All PDF Reader", "2023/05/31","11:37", "37.08KB","Word"));
+        list2.add(new item_ds(excel,"All PDF Reader", "2023/05/31","11:37", "37.08KB","Excel"));
+        list2.add(new item_ds(excel,"All PDF Reader", "2023/05/31","11:37", "37.08KB","Excel"));
+        list2.add(new item_ds(ppt,"All PDF Reader", "2023/05/31","11:37", "37.08KB","PPT"));
+        list2.add(new item_ds(ppt,"All PDF Reader", "2023/05/31","11:37", "37.08KB","PPT"));
+        List<item_ds> listm = new ArrayList<>();
+        for(int i = 0;i < list2.size();i++){
+            if(list2.get(i).getCataname()== "PDF"){
+                listm.add(list2.get(i));
+            }
+        }
+        adapterTablayout = new AdapterTablayout(listm, getContext());
+        LinearLayoutManager linearLayoutManager1 = new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false);
+        listdanhsach1.setLayoutManager(linearLayoutManager1);
         listdanhsach1.setAdapter(adapterTablayout);
+
     }
 }

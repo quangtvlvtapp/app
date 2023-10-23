@@ -10,8 +10,17 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.myapplication.Adapter.AdapterListDS;
 import com.example.myapplication.Adapter.AdapterTablayout;
@@ -35,6 +44,7 @@ public class MainActivity extends AppCompatActivity  {
     List<String> list;
     List<item_ds> list2;
     AdapterListDS adapterListDS;
+    boolean danhgia = false;
 //    HomeFragment homeFragment = new HomeFragment();
 //    FavoriteFragment favoriteFragment = new FavoriteFragment();
 //    recentFragment recentFragment = new recentFragment();
@@ -96,13 +106,111 @@ public class MainActivity extends AppCompatActivity  {
                     return true;
                 } else if (id ==R.id.menu_setting) {
                     showFragment(SettingFragment.newInstance(),"SettingFragment");
+                    dilog(Gravity.BOTTOM);
                     return true;
                 }
                 return false;
             }
         });
     }
+     public void dilog(int gravity){
+         TextView textView;
+         ImageView imageView,imageView1,imageView2,imageView3,imageView4,view;
 
+         Dialog dialog = new Dialog(MainActivity.this);
+         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+         dialog.setContentView(R.layout.dialog_danhgia);
+         textView = dialog.findViewById(R.id.dongdgia);
+         imageView = dialog.findViewById(R.id.saodg);
+         imageView1 = dialog.findViewById(R.id.saodg1);
+         imageView2 = dialog.findViewById(R.id.saodg2);
+         imageView3 = dialog.findViewById(R.id.saodg3);
+         imageView4 = dialog.findViewById(R.id.saodg4);
+         view = dialog.findViewById(R.id.dong);
+         view.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View view) {
+                 dialog.dismiss();
+             }
+         });
+         Window window = dialog.getWindow();
+         if(window==null){
+             return;
+         }
+         window.setLayout(WindowManager.LayoutParams.MATCH_PARENT,WindowManager.LayoutParams.WRAP_CONTENT);
+         window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+         WindowManager.LayoutParams layoutParams = window.getAttributes();
+         layoutParams.gravity = gravity;
+         imageView.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View view) {
+                 if(danhgia){
+                     imageView.setImageResource(R.drawable.sao);
+                     danhgia = false;
+                 }else{
+                     imageView.setImageResource(R.drawable.saom);
+                     danhgia = true;
+                 }
+
+             }
+         });
+         imageView1.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View view) {
+                 if(danhgia){
+                     imageView1.setImageResource(R.drawable.sao);
+                     danhgia = false;
+                 }else{
+                     imageView1.setImageResource(R.drawable.saom);
+                     danhgia = true;
+                 }
+             }
+         });
+         imageView2.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View view) {
+                 if(danhgia){
+                     imageView2.setImageResource(R.drawable.sao);
+                     danhgia = false;
+                 }else{
+                     imageView2.setImageResource(R.drawable.saom);
+                     danhgia = true;
+                 }
+             }
+         });
+         imageView3.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View view) {
+                 if(danhgia){
+                     imageView3.setImageResource(R.drawable.sao);
+                     danhgia = false;
+                 }else{
+                     imageView3.setImageResource(R.drawable.saom);
+                     danhgia = true;
+                 }
+             }
+         });
+         imageView4.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View view) {
+                 if(danhgia){
+                     imageView4.setImageResource(R.drawable.sao);
+                     danhgia = false;
+                 }else{
+                     imageView4.setImageResource(R.drawable.saom);
+                     danhgia = true;
+                 }
+             }
+         });
+         textView.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View view) {
+                 dialog.dismiss();
+             }
+         });
+
+         dialog.show();
+     }
 
     public void showFragment(Fragment fragment, String tag) {
         try {

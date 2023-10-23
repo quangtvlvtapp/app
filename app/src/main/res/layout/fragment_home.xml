@@ -7,7 +7,7 @@
     tools:context=".Fragment.HomeFragment">
     <LinearLayout
         android:orientation="vertical"
-        android:id="@+id/layout1"
+        android:id="@+id/layoutpdf"
         android:layout_width="match_parent"
         android:layout_height="160dp"
         android:background="#A30000">
@@ -54,7 +54,7 @@
 
     </LinearLayout>
     <ImageView
-        android:layout_marginLeft="55dp"
+        android:layout_marginLeft="49dp"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_marginTop="94dp"
@@ -65,7 +65,7 @@
         android:id="@+id/cate"
         android:layout_width="60dp"
         android:layout_height="17dp"
-        android:layout_below="@+id/layout1"
+        android:layout_below="@+id/layoutpdf"
         android:layout_alignParentStart="true"
         android:text="Category"
         android:layout_marginLeft="20dp"

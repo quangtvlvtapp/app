@@ -3,6 +3,7 @@ package com.example.myapplication.DTO;
 import java.io.Serializable;
 
 public class item_ds implements Serializable {
+    public int img;
     public String name;
     public String date;
     public String time;
@@ -12,12 +13,21 @@ public class item_ds implements Serializable {
     public item_ds() {
     }
 
-    public item_ds(String name, String date, String time, String dulieu,String cataname) {
+    public item_ds(int img,String name, String date, String time, String dulieu,String cataname) {
+        this.img = img;
         this.name = name;
         this.date = date;
         this.time = time;
         this.dulieu = dulieu;
         this.cataname = cataname;
+    }
+
+    public int getImg() {
+        return img;
+    }
+
+    public void setImg(int img) {
+        this.img = img;
     }
 
     public String getCataname() {

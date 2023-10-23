@@ -13,6 +13,8 @@ import androidx.viewpager.widget.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.example.myapplication.Adapter.AdapterListDS;
 import com.example.myapplication.Adapter.AdapterTablayout;
@@ -44,6 +46,10 @@ public class HomeFragment extends Fragment {
     List<String> list;
     List<item_ds> list2;
     AdapterListDS adapterListDS;
+
+    ImageView imageView;
+    LinearLayout linearLayout;
+
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -79,32 +85,81 @@ public class HomeFragment extends Fragment {
 //        tabLayout.setupWithViewPager(viewPager);
         tablayout1 = view.findViewById(R.id.tablayout);
         listdanhsach1 = view.findViewById(R.id.listdanhsach);
+        imageView = view.findViewById(R.id.layout1);
+        linearLayout = view.findViewById(R.id.layoutpdf);
+
+        item_ds itemDs = new item_ds();
+
         list = new ArrayList<>();
         String[] tab = {"PDF", "Word","Excel", "PPT"};
         list.addAll(Arrays.asList(tab));
         list2 = new ArrayList<>();
-        list2.add(new item_ds("All PDF Reader", "2023/05/31","11:37", "37.08KB","PDF"));
-        list2.add(new item_ds("All PDF Reader", "2023/05/31","11:37", "37.08KB","PDF"));
-        list2.add(new item_ds("All PDF Reader", "2023/05/31","11:37", "37.08KB","Word"));
-        list2.add(new item_ds("All PDF Reader", "2023/05/31","11:37", "37.08KB","Word"));
-        list2.add(new item_ds("All PDF Reader", "2023/05/31","11:37", "37.08KB","Word"));
-        list2.add(new item_ds("All PDF Reader", "2023/05/31","11:37", "37.08KB","Word"));
-        list2.add(new item_ds("All PDF Reader", "2023/05/31","11:37", "37.08KB","Word"));
-        list2.add(new item_ds("All PDF Reader", "2023/05/31","11:37", "37.08KB","Word"));
-        list2.add(new item_ds("All PDF Reader", "2023/05/31","11:37", "37.08KB","Word"));
-        adapterlist2 = new AdapterTablayout(list2, getContext());
+
+        int pdf = R.drawable.dsach;
+        int word = R.drawable.word;
+        int excel = R.drawable.logo_ex;
+        int ppt = R.drawable.logo_ppt;
+
+
+        list2.add(new item_ds(pdf,"All PDF Reader", "2023/05/31","11:37", "37.08KB","PDF"));
+        list2.add(new item_ds(pdf,"All PDF Reader", "2023/05/31","11:37", "37.08KB","PDF"));
+        list2.add(new item_ds(word,"All PDF Reader", "2023/05/31","11:37", "37.08KB","Word"));
+        list2.add(new item_ds(word,"All PDF Reader", "2023/05/31","11:37", "37.08KB","Word"));
+        list2.add(new item_ds(word,"All PDF Reader", "2023/05/31","11:37", "37.08KB","Word"));
+        list2.add(new item_ds(excel,"All PDF Reader", "2023/05/31","11:37", "37.08KB","Excel"));
+        list2.add(new item_ds(excel,"All PDF Reader", "2023/05/31","11:37", "37.08KB","Excel"));
+        list2.add(new item_ds(ppt,"All PDF Reader", "2023/05/31","11:37", "37.08KB","PPT"));
+        list2.add(new item_ds(ppt,"All PDF Reader", "2023/05/31","11:37", "37.08KB","PPT"));
+        List<item_ds> listm = new ArrayList<>();
+        for(int i = 0;i < list2.size();i++){
+            if(list2.get(i).getCataname()== "PDF"){
+                listm.add(list2.get(i));
+            }
+        }
+        adapterlist2 = new AdapterTablayout(listm, getContext());
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false);
         listdanhsach1.setLayoutManager(linearLayoutManager);
         listdanhsach1.setAdapter(adapterlist2);
+
+
+        int p = R.drawable.maunavpdf;
+        int w = R.drawable.navword;
+        int e= R.drawable.navex;
+        int pp= R.drawable.navpp;
         adapterListDS = new AdapterListDS(list, getContext(), new tabbar() {
             @Override
             public void onclick(String s) {
+                switch (s){
+                    case "PDF":
+                        linearLayout.setBackgroundResource(p);
+                        break;
+                    case "Word":
+                        linearLayout.setBackgroundResource(w);
+                        break;
+                    case "Excel":
+                        linearLayout.setBackgroundResource(e);
+                        break;
+                    case "PPT":
+                        linearLayout.setBackgroundResource(pp);
+                        break;
+                }
                 List<item_ds> listm = new ArrayList<>();
                 for(int i = 0;i < list2.size();i++){
                     if(list2.get(i).getCataname()== s){
                         listm.add(list2.get(i));
                     }
                 }
+//                for(int i = 0;i < list2.size();i++) {
+//                    if (listm.get(i).getCataname() == "PDF") {
+//                        imageView.setImageResource(p);
+//                    } else if (listm.get(i).getCataname() == "Word") {
+//                        imageView.setImageResource(w);
+//                    } else if (listm.get(i).getCataname() == "Excel") {
+//                        imageView.setImageResource(e);
+//                    } else if (listm.get(i).getCataname() == "PPT") {
+//                        imageView.setImageResource(pp);
+//                    }
+//                }
                 adapterlist2 = new AdapterTablayout(listm, getContext());
                 LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false);
                 listdanhsach1.setLayoutManager(linearLayoutManager);

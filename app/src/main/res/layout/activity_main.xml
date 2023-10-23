@@ -93,8 +93,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         app:labelVisibilityMode="labeled"
-        app:itemIconTint="@color/yellow"
-        app:itemTextColor="@color/yellow"
+        app:itemIconTint="@color/item_bottom_selected"
+        app:itemTextColor="@color/item_bottom_selected"
         app:menu="@menu/navig"/>
 
 

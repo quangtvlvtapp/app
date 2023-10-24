@@ -45,10 +45,7 @@ public class MainActivity extends AppCompatActivity  {
     List<item_ds> list2;
     AdapterListDS adapterListDS;
     boolean danhgia = false;
-//    HomeFragment homeFragment = new HomeFragment();
-//    FavoriteFragment favoriteFragment = new FavoriteFragment();
-//    recentFragment recentFragment = new recentFragment();
-//    SettingFragment settingFragment = new SettingFragment();
+
 
 
     @SuppressLint("MissingInflatedId")
@@ -58,36 +55,7 @@ public class MainActivity extends AppCompatActivity  {
         setContentView(R.layout.activity_main);
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigation);
         BottomFragmentAdapter adapter = new BottomFragmentAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
-//        tablayout1 = findViewById(R.id.tablayout);
-//        listdanhsach1 = findViewById(R.id.listdanhsach);
-//        list = new ArrayList<>();
-//        String[] tab = {"PDF", "Word","Excel", "PPT"};
-//        list.addAll(Arrays.asList(tab));
-//
-//        adapterListDS = new AdapterListDS(list,getApplicationContext());
-//        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.HORIZONTAL,false);
-//        tablayout1.setLayoutManager(linearLayoutManager);
-//        tablayout1.setAdapter(adapterListDS);
-//
-//
-//
-////        list2 = new ArrayList<>();
-////        String[] tab2 = {"All PDF Reader", "2023/05/31","11:37", "37.08KB"};
-////        list2.addAll(Arrays.asList(tab2));
-//        list2 = new ArrayList<>();
-//        list2.add(new item_ds("All PDF Reader", "2023/05/31","11:37", "37.08KB"));
-//        list2.add(new item_ds("All PDF Reader", "2023/05/31","11:37", "37.08KB"));
-//        list2.add(new item_ds("All PDF Reader", "2023/05/31","11:37", "37.08KB"));
-//        list2.add(new item_ds("All PDF Reader", "2023/05/31","11:37", "37.08KB"));
-//        list2.add(new item_ds("All PDF Reader", "2023/05/31","11:37", "37.08KB"));
-//        list2.add(new item_ds("All PDF Reader", "2023/05/31","11:37", "37.08KB"));
-//        list2.add(new item_ds("All PDF Reader", "2023/05/31","11:37", "37.08KB"));
-//        list2.add(new item_ds("All PDF Reader", "2023/05/31","11:37", "37.08KB"));
-//        list2.add(new item_ds("All PDF Reader", "2023/05/31","11:37", "37.08KB"));
-//        adapterTablayout = new AdapterTablayout(list2,MainActivity.this);
-//        LinearLayoutManager linearLayout = new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.VERTICAL,false);
-//        listdanhsach1.setLayoutManager(linearLayout);
-//        listdanhsach1.setAdapter(adapterTablayout);
+
 
 
         getSupportFragmentManager().beginTransaction().replace(R.id.view_page,HomeFragment.newInstance(),"HomeFragment").commit();

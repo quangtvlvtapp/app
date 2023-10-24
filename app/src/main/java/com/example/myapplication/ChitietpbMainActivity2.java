@@ -19,7 +19,7 @@ public class ChitietpbMainActivity2 extends AppCompatActivity {
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //startActivity(new Intent(getApplicationContext(), SettingFragment.class));
+
                 finish();
             }
         });

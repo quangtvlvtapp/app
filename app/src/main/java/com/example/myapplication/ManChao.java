@@ -17,7 +17,7 @@ public class ManChao extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(getApplicationContext(),Introl.class));
+                startActivity(new Intent(getApplicationContext(),Language.class));
             }
         },3000);
     }

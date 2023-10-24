@@ -19,15 +19,13 @@ public class pdffActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pdff);
-//        ImageView img = findViewById(R.id.docexcel);
-//        out = findViewById(R.id.outtrangpdf);
+
 
         imageView = findViewById(R.id.outtrangpdff);
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//               startActivity(new Intent(pdfActivity.this, MainActivity.class));
-//              Toast.makeText(pdfActivity.this, "Thành cong", Toast.LENGTH_SHORT).show();
+
                 finish();
             }
         });

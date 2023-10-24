@@ -1,7 +1,6 @@
 package com.example.myapplication;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
@@ -10,10 +9,6 @@ import com.example.myapplication.Fragment.FavoriteFragment;
 import com.example.myapplication.Fragment.HomeFragment;
 import com.example.myapplication.Fragment.SettingFragment;
 import com.example.myapplication.Fragment.recentFragment;
-import com.example.myapplication.Tabbar.ExcelFragment;
-import com.example.myapplication.Tabbar.PDFFragment;
-import com.example.myapplication.Tabbar.PPTFragment;
-import com.example.myapplication.Tabbar.WordFragment;
 
 public class BottomFragmentAdapter extends FragmentStatePagerAdapter {
     public BottomFragmentAdapter(@NonNull FragmentManager fm, int behavior) {
@@ -42,25 +37,5 @@ public class BottomFragmentAdapter extends FragmentStatePagerAdapter {
         return 4;
     }
 
-//    @Nullable
-//    @Override
-//    public CharSequence getPageTitle(int position) {
-//        String title ="";
-//        switch (position){
-//            case 0:
-//                title ="Doucument";
-//                break;
-//            case 1:
-//                title="Recent";
-//                break;
-//            case 2:
-//                title="Favorite";
-//                break;
-//            case 3:
-//                title="Setting";
-//                break;
-//
-//        }
-//        return super.getPageTitle(position);
-//    }
+
 }

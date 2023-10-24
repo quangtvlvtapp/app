@@ -65,6 +65,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/cardView3"
         tools:ignore="MissingConstraints"
+        android:layout_marginBottom="10dp"
         tools:layout_editor_absoluteX="-42dp">
 
         <LinearLayout
@@ -73,6 +74,7 @@
             android:orientation="horizontal">
 
             <me.relex.circleindicator.CircleIndicator
+                android:layout_marginLeft="20dp"
                 android:id="@+id/circle"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
@@ -83,7 +85,7 @@
                 android:id="@+id/nextslide"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="300dp"
+                android:layout_marginLeft="270dp"
                 android:layout_marginTop="5dp"
                 android:text="Next"
                 android:textColor="#B71D21"
@@ -93,6 +95,7 @@
     </RelativeLayout>
 
     <androidx.cardview.widget.CardView
+        android:layout_marginBottom="10dp"
         android:id="@+id/cardView3"
         android:layout_width="360dp"
         android:layout_height="122dp"

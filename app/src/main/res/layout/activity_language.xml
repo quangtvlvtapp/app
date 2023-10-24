@@ -29,9 +29,10 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
+            android:id="@+id/tich"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:layout_marginLeft="250dp"
+            android:layout_marginLeft="235dp"
             android:layout_marginTop="18dp"
             android:background="@drawable/v" />
     </LinearLayout>
@@ -40,7 +41,7 @@
         android:id="@+id/linearLayout2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
@@ -81,7 +82,7 @@
         android:id="@+id/linearLayout4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
@@ -124,7 +125,7 @@
         android:id="@+id/linearLayout3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
@@ -167,7 +168,7 @@
         android:id="@+id/linearLayout5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
@@ -211,7 +212,7 @@
         android:id="@+id/linearLayout6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
@@ -221,7 +222,6 @@
         <androidx.cardview.widget.CardView
             android:layout_width="328dp"
             android:layout_height="56dp"
-            android:layout_marginTop="24dp"
             app:cardCornerRadius="15dp">
 
             <LinearLayout
@@ -252,7 +252,7 @@
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
@@ -262,8 +262,6 @@
         <androidx.cardview.widget.CardView
             android:layout_width="328dp"
             android:layout_height="56dp"
-
-            android:layout_marginTop="20dp"
             app:cardCornerRadius="15dp"
             >
 
@@ -293,8 +291,9 @@
     </LinearLayout>
     <androidx.cardview.widget.CardView
         android:layout_width="360dp"
-        android:layout_height="122dp"
+        android:layout_height="247dp"
         app:cardCornerRadius="20dp"
+        android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -333,6 +332,12 @@
                         android:textColor="#1A1C21"/>
                 </LinearLayout>
             </LinearLayout>
+            <ImageView
+                android:layout_width="163dp"
+                android:layout_height="109dp"
+                android:background="@drawable/permission"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"/>
 
             <TextView
                 android:layout_marginTop="10dp"

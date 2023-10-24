@@ -120,9 +120,7 @@ public class recentFragment extends Fragment {
 
 
 
-//        list2 = new ArrayList<>();
-//        String[] tab2 = {"All PDF Reader", "2023/05/31","11:37", "37.08KB"};
-//        list2.addAll(Arrays.asList(tab2));
+
         list2 = new ArrayList<>();
 
         int pdf = R.drawable.dsach;

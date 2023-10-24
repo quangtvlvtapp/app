@@ -5,10 +5,8 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager.widget.ViewPager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,11 +17,8 @@ import android.widget.LinearLayout;
 import com.example.myapplication.Adapter.AdapterListDS;
 import com.example.myapplication.Adapter.AdapterTablayout;
 import com.example.myapplication.DTO.item_ds;
-import com.example.myapplication.MainActivity;
 import com.example.myapplication.R;
-import com.example.myapplication.TabbarAdapter;
 import com.example.myapplication.tabbar;
-import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -78,11 +73,7 @@ public class HomeFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-//        tabLayout = view.findViewById(R.id.tab_layout);
-//        viewPager = view.findViewById(R.id.viewpager);
-//        TabbarAdapter tabbarAdapter = new TabbarAdapter(getActivity().getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
-//        viewPager.setAdapter(tabbarAdapter);
-//        tabLayout.setupWithViewPager(viewPager);
+
         tablayout1 = view.findViewById(R.id.tablayout);
         listdanhsach1 = view.findViewById(R.id.listdanhsach);
         imageView = view.findViewById(R.id.layout1);
@@ -149,17 +140,7 @@ public class HomeFragment extends Fragment {
                         listm.add(list2.get(i));
                     }
                 }
-//                for(int i = 0;i < list2.size();i++) {
-//                    if (listm.get(i).getCataname() == "PDF") {
-//                        imageView.setImageResource(p);
-//                    } else if (listm.get(i).getCataname() == "Word") {
-//                        imageView.setImageResource(w);
-//                    } else if (listm.get(i).getCataname() == "Excel") {
-//                        imageView.setImageResource(e);
-//                    } else if (listm.get(i).getCataname() == "PPT") {
-//                        imageView.setImageResource(pp);
-//                    }
-//                }
+
                 adapterlist2 = new AdapterTablayout(listm, getContext());
                 LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false);
                 listdanhsach1.setLayoutManager(linearLayoutManager);
@@ -172,9 +153,6 @@ public class HomeFragment extends Fragment {
 
 
 
-//        list2 = new ArrayList<>();
-//        String[] tab2 = {"All PDF Reader", "2023/05/31","11:37", "37.08KB"};
-//        list2.addAll(Arrays.asList(tab2));
 
     }
 }

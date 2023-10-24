@@ -8,6 +8,7 @@
     android:layout_height="wrap_content"
     android:id="@+id/tablayoutrcview">
     <ImageView
+        android:background="@drawable/boderdo"
         android:layout_width="83dp"
         android:layout_height="34dp"
         android:id="@+id/imgtab"/>

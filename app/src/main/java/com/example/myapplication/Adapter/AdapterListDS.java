@@ -2,15 +2,11 @@ package com.example.myapplication.Adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Color;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -19,14 +15,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.DTO.item_ds;
 import com.example.myapplication.R;
-import com.example.myapplication.Tabbar.ExcelFragment;
-import com.example.myapplication.Tabbar.PDFFragment;
-import com.example.myapplication.Tabbar.PPTFragment;
-import com.example.myapplication.Tabbar.WordFragment;
-import com.example.myapplication.View.ShowwordActivity;
-import com.example.myapplication.View.ViewExcelActivity;
-import com.example.myapplication.View.pdffActivity;
-import com.example.myapplication.View.ppActivity;
 import com.example.myapplication.tabbar;
 
 import java.util.ArrayList;
@@ -41,7 +29,7 @@ public class AdapterListDS extends RecyclerView.Adapter<AdapterListDS.ViewHodel>
     boolean tab = false;
 
     int setSlecte = -1;
-    int color,boder;
+    int color,boder =R.drawable.boderdo ;
     public AdapterListDS(List<String> list, Context mContext,tabbar tabbar) {
         this.list = list;
         this.mContext = mContext;
@@ -60,6 +48,10 @@ public class AdapterListDS extends RecyclerView.Adapter<AdapterListDS.ViewHodel>
     @Override
     public void onBindViewHolder(@NonNull ViewHodel holder, int position) {
         holder.textView.setText(list.get(position));
+        int bp = R.drawable.boderdo;
+        int bw = R.drawable.boderwx;
+        int be = R.drawable.boderex;
+        int bpp = R.drawable.boderp;
 
         boolean inselected = (position == setSlecte);
 
@@ -67,41 +59,54 @@ public class AdapterListDS extends RecyclerView.Adapter<AdapterListDS.ViewHodel>
         int w = R.drawable.navword;
         int e= R.drawable.navex;
         int pp= R.drawable.navpp;
-
-        int bp = R.drawable.boderdo;
-        int bw = R.drawable.boderwx;
-        int be = R.drawable.boderex;
-        int bpp = R.drawable.boderp;
+//        holder.imageView.setImageResource(bp);
 
 
         switch (list.get(position)){
             case "PDF":
                 color = p;
-                boder = bp;
                 break;
             case "Word":
                 color = w;
-                boder = bw;
                 break;
             case "Excel":
-                 color = e;
-                boder = be;
+                color = e;
                 break;
             case "PPT":
                 color = pp;
-                boder = bpp;
                 break;
         }
+
+//        holder.imageView.setBackgroundResource(inselected?color: bp);
+
         holder.imageView.setBackgroundResource(inselected?color: boder);
+
+
         //holder.imageView.setBackgroundResource(inselected?color: android.R.color.white);
         holder.textView.setTextColor(inselected? Color.WHITE:Color.parseColor("#A0A0A0"));
 
         holder.textView.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
+               switch (list.get(position)){
+                   case "PDF":
+                       boder = bp;
+                       break;
+                   case "Word":
+                       boder = bw;
+                       break;
+                   case "Excel":
+                       boder = be;
+                       break;
+                   case "PPT":
+                       boder = bpp;
+                       break;
+               }
                setSlecte = position;
                notifyDataSetChanged();
+
                tabbar.onclick(list.get(position));
+
            }
        });
     }

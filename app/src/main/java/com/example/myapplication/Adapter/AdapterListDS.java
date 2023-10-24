@@ -41,7 +41,7 @@ public class AdapterListDS extends RecyclerView.Adapter<AdapterListDS.ViewHodel>
     boolean tab = false;
 
     int setSlecte = -1;
-    int color;
+    int color,boder;
     public AdapterListDS(List<String> list, Context mContext,tabbar tabbar) {
         this.list = list;
         this.mContext = mContext;
@@ -68,22 +68,32 @@ public class AdapterListDS extends RecyclerView.Adapter<AdapterListDS.ViewHodel>
         int e= R.drawable.navex;
         int pp= R.drawable.navpp;
 
+        int bp = R.drawable.boderdo;
+        int bw = R.drawable.boderwx;
+        int be = R.drawable.boderex;
+        int bpp = R.drawable.boderp;
+
+
         switch (list.get(position)){
             case "PDF":
                 color = p;
+                boder = bp;
                 break;
             case "Word":
                 color = w;
+                boder = bw;
                 break;
             case "Excel":
                  color = e;
+                boder = be;
                 break;
             case "PPT":
                 color = pp;
+                boder = bpp;
                 break;
         }
-
-        holder.imageView.setBackgroundResource(inselected?color: android.R.color.white);
+        holder.imageView.setBackgroundResource(inselected?color: boder);
+        //holder.imageView.setBackgroundResource(inselected?color: android.R.color.white);
         holder.textView.setTextColor(inselected? Color.WHITE:Color.parseColor("#A0A0A0"));
 
         holder.textView.setOnClickListener(new View.OnClickListener() {
